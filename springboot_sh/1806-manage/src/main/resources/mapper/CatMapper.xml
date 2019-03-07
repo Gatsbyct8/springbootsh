@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sh.manage.mapper.CatMapper">
+	<select id="selectParentCat" resultType="CommodityCat">
+	select * from commodity_category where is_parent=1; 
+	</select>
+</mapper>

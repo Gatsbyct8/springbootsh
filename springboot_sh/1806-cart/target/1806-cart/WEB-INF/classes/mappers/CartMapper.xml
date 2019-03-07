@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sh.cart.mapper.CartMapper">
+
+<!--  更新方法-->
+<update id="updateNum" parameterType="Cart">
+	update cart set count=#{count} where user_id=#{userId} and commodity_id=#{commodityId}
+</update>
+
+<delete id="deleteCart" parameterType="Cart">
+	Delete from cart where user_id=#{userId} and commodity_id=#{commodityId}
+</delete>
+</mapper>
+
+
+
+
+
+
+
+
