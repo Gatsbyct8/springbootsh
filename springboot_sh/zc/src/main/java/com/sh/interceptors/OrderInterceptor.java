@@ -41,7 +41,7 @@ public class OrderInterceptor implements HandlerInterceptor{
 				//返回false 不放行,拦住了,需要完成相应逻辑
 			}
 			
-		};
+		}
 		//不能同时满足2个if条件,就是未登录状态
 		response.sendRedirect("/login");
 		return false;
