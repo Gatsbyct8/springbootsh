@@ -45,6 +45,7 @@ public class UserService {
 	}
 	public String doLogin(User user) throws Exception {
 		//String url="http://sso.sh.com/user/login";
+		//String url="http://localhost:8096/user/login";
 		String url="http://localhost:8096/user/login";
 		Map<String,Object> map=new HashMap<String,Object>();
 		map.put("u", user.getPhone());
