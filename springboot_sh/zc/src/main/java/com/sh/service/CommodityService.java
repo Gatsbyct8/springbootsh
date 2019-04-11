@@ -44,8 +44,10 @@ public class CommodityService {
 			return commodity;
 		}else{
 			//先从后台获取
-			String url1="http://manage.sh.com/getCommodity/"+commodityId;
-			String url2="http://manage.sh.com/getCommodityImg/"+commodityId;
+			//String url1="http://manage.sh.com/getCommodity/"+commodityId;
+			String url1="http://localhost:8091/getCommodity/"+commodityId;
+			//String url2="http://manage.sh.com/getCommodityImg/"+commodityId;
+			String url2="http://localhost:8091/getCommodityImg/"+commodityId;
 			//httpCLient发起请求,获取响应体的内容,json字符串,转化成item对象
 			//System.out.println(key);
 			String itemJson1 = client.doGet(url1);//响应体重的json字符串
@@ -96,7 +98,8 @@ public class CommodityService {
 			for (int i=0;i<commodityList.size();i++) {
 				System.out.println("......................."+commodityList.get(i));
 				Commodity commodity=commodityList.get(i);
-				String url2="http://manage.sh.com/getCommodityImg/"+commodityList.get(i).getCommodityId();
+				//String url2="http://manage.sh.com/getCommodityImg/"+commodityList.get(i).getCommodityId();
+				String url2="http://localhost:8091/getCommodityImg/"+commodityList.get(i).getCommodityId();
 				System.out.println("--------------"+commodityList.get(i).getCommodityId());
 				String itemJson2 = client.doGet(url2);
 				System.out.println("11111111111--------"+itemJson2);

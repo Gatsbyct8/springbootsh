@@ -13,7 +13,8 @@ public class UserDetailService {
 	@Autowired
 	HttpClientService client;
 	public UserDetail goMyUserDateil(Long userId) throws Exception{
-		String url="http://user.sh.com/personalCenter/more/"+userId;
+		//String url="http://user.sh.com/personalCenter/more/"+userId;
+		String url="http://localhost:8095/personalCenter/more/"+userId;
 		String userDateilJson=client.doGet(url);
 		UserDetail userDetail=ObjectUtil.mapper.readValue(userDateilJson, UserDetail.class);
 		System.out.println("后台传来的数据:"+userDetail);

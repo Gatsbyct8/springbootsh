@@ -19,14 +19,16 @@ public class OrderService {
 	@Autowired
 	private HttpClientService client;
 	public Long submit(Order order) throws Exception {
-		String url="http://order.sh.com/order/submit";
+		//String url="http://order.sh.com/order/submit";
+		String url="http://localhost:8093/order/submit";
 		//转化json
 		String orderJson=ObjectUtil.mapper.writeValueAsString(order);
 		String orderId=client.doPostJson(url, orderJson);
 		return Long.parseLong(orderId);
 	}
 	public Order success(Long id) throws Exception {
-		String url="http://order.sh.com/order/query/"+id;
+		//String url="http://order.sh.com/order/query/"+id;
+		String url="http://localhost:8093/order/query/"+id;
 		String orderJson=client.doGet(url);
 		//转化成对象
 		Order order=ObjectUtil.mapper.readValue(orderJson, Order.class);
@@ -35,7 +37,8 @@ public class OrderService {
 
 	public List<Cart> queryCartCommodity(Long userId) throws Exception {
 
-		String url = "http://cart.sh.com/cart/query/" + userId;
+		//String url = "http://cart.sh.com/cart/query/" + userId;
+		String url = "http://localhost:8092/cart/query/" + userId;
 		String jsonData = client.doGet(url);
 		// 从result中获取data属性list<cart>
 		SysResult result = ObjectUtil.mapper.readValue(jsonData, SysResult.class);
@@ -44,7 +47,8 @@ public class OrderService {
 
 	}
 	public List<Order> orderList(long userId) throws Exception {
-		String url="http://order.sh.com/order/orderList/"+userId;
+		//String url="http://order.sh.com/order/orderList/"+userId;
+		String url="http://localhost:8093/order/orderList/"+userId;
 		String orderJson=client.doGet(url);
 		if(orderJson.equals("[]")){
 			Order order=new Order();

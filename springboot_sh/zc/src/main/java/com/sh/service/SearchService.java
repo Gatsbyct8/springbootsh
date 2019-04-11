@@ -53,7 +53,8 @@ public class SearchService {
 		for (int i=0;i<CommodityList.size();i++) {
 			System.out.println("......................."+CommodityList.get(i));
 			Commodity commodity=CommodityList.get(i);
-			String url2="http://manage.sh.com/getCommodityImg/"+CommodityList.get(i).getCommodityId();
+			//String url2="http://manage.sh.com/getCommodityImg/"+CommodityList.get(i).getCommodityId();
+			String url2="http://localhost:8091/getCommodityImg/"+CommodityList.get(i).getCommodityId();
 			System.out.println("--------------"+CommodityList.get(i).getCommodityId());
 			String itemJson2 = clientServer.doGet(url2);
 			System.out.println("11111111111--------"+itemJson2);
