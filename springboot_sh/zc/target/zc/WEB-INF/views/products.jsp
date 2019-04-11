@@ -101,7 +101,7 @@
           <div class="col-md-4 p-1">
             <div class="card mb-4 box-shadow pr-2 pl-2">
               <a href="product_details.html?lid=1">
-                <img class="card-img-top" src="${commodity.bigImage}">
+                <img class="card-img-top" src="${commodity.commodityBigImage}">
               </a>
               <div class="card-body p-0">
                 <h5 class="text-primary">￥${commodity.price}</h5>

@@ -29,7 +29,8 @@ public class UserService {
 	
 	
 	public int doRegister(User user) throws Exception {
-		String url="http://sso.sh.com/user/register";
+		//String url="http://sso.sh.com/user/register";
+		String url="http://localhost:8096/user/register";
 		//调用的doPost(url,map)
 		//username=haha&password=124&phone=185,添加到请求体中传递
 		Map<String,Object> map=new HashMap<String,Object>();
@@ -63,7 +64,8 @@ public class UserService {
 		return ticket;
 	}
 	public User goMyuser(Long userId) throws Exception{
-		String url="http://user.sh.com/personalCenter/"+userId;
+		//String url="http://user.sh.com/personalCenter/"+userId;
+		String url="http://localhost:8096/personalCenter/"+userId;
 		String userJson=client.doGet(url);
 		System.out.println(userJson);
 		User user=ObjectUtil.mapper.readValue(userJson, User.class);
@@ -71,7 +73,8 @@ public class UserService {
 		return user;
 	}
 	public String saveUserDetail(UserDetail userDetail) throws Exception {
-		String url="http://user.sh.com/personalCenter/updateUserDetail";
+		//String url="http://user.sh.com/personalCenter/updateUserDetail";
+		String url="http://localhost:8096/personalCenter/updateUserDetail";
 		String detailJson=ObjectUtil.mapper.writeValueAsString(userDetail);
 		String result=client.doPostJson(url, detailJson);
 		return result;

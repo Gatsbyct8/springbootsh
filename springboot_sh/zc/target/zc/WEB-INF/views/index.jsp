@@ -140,8 +140,9 @@ div.nav-item li{
 				</ul>
 				<div class="nav-search">
 					<div class="search">
+					<a href=""></a>
 						<form action="/searchFirst" class="search-form">
-							<button type="submit">搜</button>
+						   <button type="submit">搜</button>
 							<input type="text" maxlength="10" name="q" id="">
 							<div>
 								<a href="" class="commend">小米6摄像头 2899起</a>

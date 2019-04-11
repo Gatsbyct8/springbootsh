@@ -427,7 +427,7 @@ body {
 						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;数量</li>
 				</ul>
 				<div class="cartBox">
-					<c:forEach items="${order.orderDetails}" var="orderDetail">
+					<c:forEach items="${order.orderDetailList}" var="orderDetail">
 						<div class="order_content">
 							<ul class="order_lists">
 								<li class="list_con">

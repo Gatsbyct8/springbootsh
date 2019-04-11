@@ -23,7 +23,8 @@ public class CartService {
 	private HttpClientService client;
 	
 	public List<Cart> queryCart(Long userId) throws Exception {
-		String url="http://cart.sh.com/cart/query/"+userId;
+		//String url="http://cart.sh.com/cart/query/"+userId;
+		String url="http://localhost:8092/cart/query/"+userId;
 		String jsonData = client.doGet(url);//sysResult的json，获取data
 		System.out.println("33333333333333"+jsonData);
 		List<Cart> cartList=
@@ -34,8 +35,10 @@ public class CartService {
 	//保存购物车
 	public void addCart(Long userId, Long commodityId, Integer num) throws Exception {
 		//利用itemId获取price，image，title
-		String url="http://manage.sh.com/getCommodity/"+commodityId;
-		String url2="http://manage.sh.com/getCommodityImg/"+commodityId;
+		//String url="http://manage.sh.com/getCommodity/"+commodityId;
+		String url="http://localhost:8091/getCommodity/"+commodityId;
+		//String url2="http://manage.sh.com/getCommodityImg/"+commodityId;
+		String url2="http://localhost:8091/getCommodityImg/"+commodityId;
 		String commodityJson = client.doGet(url);
 		//itemTitle=title,itemPrice=price,itemImage=?image
 		Commodity commodity = ObjectUtil.mapper.
@@ -46,7 +49,8 @@ public class CartService {
 		List<String> commodityImg=JSONToListUtil.jsonToList(jsonObject.get("data").toString(), String.class);
 		System.out.println(commodityImg);
 		//使用client,doPost 将参数封装在map对象中
-		url="http://cart.sh.com/cart/save";
+		//url="http://cart.sh.com/cart/save";
+		url="http://localhost:8092/cart/save";
 		Cart cart=new Cart();
 		cart.setCommodityId(commodityId);
 		cart.setUserId(userId);
@@ -69,14 +73,17 @@ public class CartService {
 	}
 	public String updatedNum(Long userId, 
 			Long itemId, Integer num) throws Exception {
-		String url="http://cart.sh.com/cart/update/num/"+
+		/*String url="http://cart.sh.com/cart/update/num/"+
+				userId+"/"+itemId+"/"+num;*/
+		String url="http://localhost:8092/cart/update/num/"+
 				userId+"/"+itemId+"/"+num;
 		return client.doGet(url);
 	}
 	public String deleteCart(Long userId, Long itemId) throws Exception {
-		String url="http://cart.sh.com/cart/delete/"
+		/*String url="http://cart.sh.com/cart/delete/"
+				+userId+"/"+itemId;*/
+		String url="http://localhost:8092/cart/delete/"
 				+userId+"/"+itemId;
-		
 		return client.doGet(url);
 	}
 	
