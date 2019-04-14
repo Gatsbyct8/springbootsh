@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="1806-user:war">
+    <output-path>$PROJECT_DIR$/springboot_sh/1806-user/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>1806-user</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="1806-user.war">
+      <element id="artifact" artifact-name="1806-user:war exploded" />
+    </root>
+  </artifact>
+</component>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="1804-common" />
+        <module name="1806-cart" />
+        <module name="1806-manage" />
+        <module name="1806-order" />
+        <module name="1806-sso" />
+        <module name="1806-user" />
+        <module name="zc" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="1804-common" target="1.8" />
+      <module name="1806-cart" target="1.8" />
+      <module name="1806-manage" target="1.8" />
+      <module name="1806-order" target="1.8" />
+      <module name="1806-sso" target="1.8" />
+      <module name="1806-user" target="1.8" />
+      <module name="zc" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
