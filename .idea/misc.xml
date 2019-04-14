@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/springboot_sh/1806-cart" />
+    <file type="web" url="file://$PROJECT_DIR$/springboot_sh/1806-manage" />
+    <file type="web" url="file://$PROJECT_DIR$/springboot_sh/1806-order" />
+    <file type="web" url="file://$PROJECT_DIR$/springboot_sh/1806-user" />
+    <file type="web" url="file://$PROJECT_DIR$/springboot_sh/zc" />
+  </component>
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/springboot_sh/1806-sso/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot_sh/zc/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot_sh/1806-user/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot_sh/1806-common/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot_sh/1806-cart/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot_sh/1806-order/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot_sh/1806-manage/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>

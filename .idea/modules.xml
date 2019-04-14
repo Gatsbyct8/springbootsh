@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/springboot_sh/1806-common/1804-common.iml" filepath="$PROJECT_DIR$/springboot_sh/1806-common/1804-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot_sh/1806-cart/1806-cart.iml" filepath="$PROJECT_DIR$/springboot_sh/1806-cart/1806-cart.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot_sh/1806-manage/1806-manage.iml" filepath="$PROJECT_DIR$/springboot_sh/1806-manage/1806-manage.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot_sh/1806-order/1806-order.iml" filepath="$PROJECT_DIR$/springboot_sh/1806-order/1806-order.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot_sh/1806-sso/1806-sso.iml" filepath="$PROJECT_DIR$/springboot_sh/1806-sso/1806-sso.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot_sh/1806-user/1806-user.iml" filepath="$PROJECT_DIR$/springboot_sh/1806-user/1806-user.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot_sh/zc/zc.iml" filepath="$PROJECT_DIR$/springboot_sh/zc/zc.iml" />
+    </modules>
+  </component>
+</project>
