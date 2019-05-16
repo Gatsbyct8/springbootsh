@@ -8,10 +8,12 @@ import com.sh.user.mapper.UserDetailMapper;
 import com.sh.user.pojo.User;
 import com.sh.user.pojo.UserDetail;
 
+import javax.annotation.Resource;
+
 @Service
 public class UserDetailService {
 	
-	@Autowired
+	@Resource
 	private UserDetailMapper userDetailMapper;
 	
 	public UserDetail getMyUserDetail(Long userDetailId) {
@@ -24,10 +26,16 @@ public class UserDetailService {
 	}
 
 	public void updateUserDetail(UserDetail detail) {
-		userDetailMapper.updateUserDetail(detail);
-		
+		//userDetailMapper.updateUserDetail(detail);
+		//userDetailMapper.updateByPrimaryKeySelective(detail);
+		userDetailMapper.updateByPrimaryKey(detail);
 	}
 
+    public void addMyUserDetail(Long userDetailId) {
+		UserDetail detail=new UserDetail();
+		detail.setUserDetailId(userDetailId);
+		userDetailMapper.insert(detail);
+    }
 }
 /*User user=new User();
 user.setUserId(userid);

@@ -9,8 +9,8 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <title>订单</title>
 
-<link rel="stylesheet" href="css/reset.css">
-<link rel="stylesheet" href="css/orders.css">
+<link rel="stylesheet" href="../../css/reset.css">
+<link rel="stylesheet" href="../../css/orders.css">
 <style>
 a {
 	text-decoration: none;
@@ -144,7 +144,7 @@ body {
 .guanzhu .ziji1 {
 	width: 100px;
 	height: 100px;
-	background-image: url(images/weibo2.png);
+	background-image: url(../../images/weibo2.png);
 	position: absolute;
 	top: 30px;
 	left: -10px;
@@ -158,7 +158,7 @@ body {
 .guanzhu .ziji2 {
 	width: 100px;
 	height: 100px;
-	background-image: url(images/weixin2.png);
+	background-image: url(../../images/weixin2.png);
 	position: absolute;
 	top: 30px;
 	left: -10px;
@@ -330,7 +330,7 @@ body {
 </style>
 
 <!-- Link Swiper's CSS -->
-<link rel="stylesheet" href="css/swiper.min.css">
+<link rel="stylesheet" href="../../css/swiper.min.css">
 
 <!-- Demo styles -->
 <style>
@@ -349,7 +349,7 @@ body {
 }
 </style>
 <!-- Swiper JS -->
-<script src="js/swiper.min.js">
+<script src="../../js/swiper.min.js">
 	
 </script>
 
@@ -427,7 +427,7 @@ body {
 						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;数量</li>
 				</ul>
 				<div class="cartBox">
-					<c:forEach items="${order.orderDetailList}" var="orderDetail">
+					<c:forEach items="${order.orderDetails}" var="orderDetail">
 						<div class="order_content">
 							<ul class="order_lists">
 								<li class="list_con">
@@ -441,7 +441,7 @@ body {
 								<li class="price">
 									<p class="price">${orderDetail.price}</p>
 								</li>
-								<li class="count"></li>
+								<li class="count">
 								<span>${orderDetail.count}</span>
 								</li>
 							</ul>
@@ -473,7 +473,7 @@ body {
 		</div>
 	</section>
 	<!-- Swiper JS -->
-	<script src="js/swiper.min.js">
+	<script src="../../js/swiper.min.js">
 		
 	</script>
 
@@ -555,8 +555,8 @@ body {
 				</dd>
 			</dl>
 			<div class="erweima22">
-				<span><img src="images/weibo2.png" alt="">INBEAUTY官方微博<br>
-					@INBEAUTY</span> <span><img src="images/weixin2.png" alt="">INBEAUTY官方微信<br>
+				<span><img src="../../images/weibo.png" alt="">INBEAUTY官方微博<br>
+					@INBEAUTY</span> <span><img src="../../images/wiexin.png" alt="">INBEAUTY官方微信<br>
 					ID:TNBEAUTYCOM</span>
 
 			</div>
@@ -573,7 +573,7 @@ body {
 				href="">Copyright 2000-2022 INBEAUTY 版权所有INBEAUTY国际控股有限公司</a>
 		</div>
 	</div>
-	<script src="js/jquery.min.js"></script>
-	<script src="js/orders.js"></script>
+	<script src="../../js/jquery.min.js"></script>
+	<script src="../../js/orders.js"></script>
 </body>
 </html>

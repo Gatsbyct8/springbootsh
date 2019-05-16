@@ -65,7 +65,7 @@ public class UserService {
 	}
 	public User goMyuser(Long userId) throws Exception{
 		//String url="http://user.sh.com/personalCenter/"+userId;
-		String url="http://localhost:8096/personalCenter/"+userId;
+		String url="http://localhost:8095/personalCenter/"+userId;
 		String userJson=client.doGet(url);
 		System.out.println(userJson);
 		User user=ObjectUtil.mapper.readValue(userJson, User.class);
@@ -74,7 +74,7 @@ public class UserService {
 	}
 	public String saveUserDetail(UserDetail userDetail) throws Exception {
 		//String url="http://user.sh.com/personalCenter/updateUserDetail";
-		String url="http://localhost:8096/personalCenter/updateUserDetail";
+		String url="http://localhost:8095/personalCenter/updateUserDetail";
 		String detailJson=ObjectUtil.mapper.writeValueAsString(userDetail);
 		String result=client.doPostJson(url, detailJson);
 		return result;

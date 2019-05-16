@@ -43,8 +43,7 @@ public class OrderController {
 	public SysResult submitOrder(Order order,
 			HttpServletRequest request) throws Exception{
 		System.out.println(order);
-		Long userId=1L;
-		//(long)request.getAttribute("userId");
+		Long userId=(long)request.getAttribute("userId");
 		order.setUserId(userId);
 		Long orderId=orderService.submit(order);
 		return SysResult.oK(orderId);

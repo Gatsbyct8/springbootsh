@@ -12,10 +12,13 @@ import com.sh.common.util.ObjectUtil;
 import com.sh.common.vo.SysResult;
 import com.sh.sso.mapper.UserMapper;
 import com.sh.sso.pojo.User;
+import redis.clients.jedis.Jedis;
+
+import javax.annotation.Resource;
 
 @Service
 public class UserService {
-	@Autowired
+	@Resource
 	private UserMapper userMapper;
 	public SysResult checkParam(String param, Integer type) {
 		//逻辑判断,type==1,查username type==2 查phone
@@ -37,6 +40,7 @@ public class UserService {
 		//user.setEmail(user.getUsername());
 		//password加密
 		user.setPassword(DigestUtils.md5Hex(user.getPassword()));
+		//System.out.println(user.getUserId());
 		userMapper.insertSelective(user);
 	}
 	@Autowired
@@ -54,15 +58,18 @@ public class UserService {
 			String ticket=DigestUtils.
 		md5Hex("JT_TICKET_"+System.currentTimeMillis()+phone);
 			String userJson=ObjectUtil.mapper.writeValueAsString(user);
-			redis.set(ticket, userJson);
+			//redis.set(ticket, userJson);
+			Jedis jedis = new Jedis("localhost", 6379);
+			jedis.set(ticket, userJson);
 			return ticket;
 		}
 		//登录失败返回空字符串
 		return "";//如果返回null,前台接到的是SysResult的json,ticket "null"
 	}
 	public String queryUserJson(String ticket) {
-		
-		return redis.get(ticket);
+		Jedis jedis = new Jedis("localhost", 6379);
+		return jedis.get(ticket);
+		//return redis.get(ticket);
 	}
 
 }

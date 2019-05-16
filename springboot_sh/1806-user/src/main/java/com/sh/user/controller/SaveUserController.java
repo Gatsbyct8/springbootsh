@@ -44,6 +44,7 @@ public class SaveUserController {
 		try{
 		   UserDetail detail=ObjectUtil.mapper.readValue(detailJson, UserDetail.class);
 		   userDetailService.updateUserDetail(detail);
+		   detail=userDetailService.getMyUserDetail(detail.getUserDetailId());
 		   return SysResult.oK();
 		}catch(Exception e){
 			e.printStackTrace();

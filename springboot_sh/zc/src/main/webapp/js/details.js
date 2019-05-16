@@ -65,7 +65,7 @@ $(function(){
         $img=$(this);
         var md=$img.attr("data-md");
         $mImage.attr("src",md);
-        $lgImage.css("backgroundImage", url(${$img.attr("data-lg")})`);
+        $lgImage.css("backgroundImage", url(${$img.attr("data-lg")}));
       })
       //实现放大镜的移动
       //console.log($mImage);

@@ -1,6 +1,6 @@
 (async function(){
     var res=await ajax({
-        url:"http://localhost:3000/index/",
+        url:"http://localhost:8090/index/",
         type:"get",
         dataType:"json"
     });

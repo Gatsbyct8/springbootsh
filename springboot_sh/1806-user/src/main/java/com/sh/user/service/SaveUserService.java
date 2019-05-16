@@ -9,10 +9,12 @@ import com.sh.common.vo.SysResult;
 import com.sh.user.mapper.SaveUserMapper;
 import com.sh.user.pojo.User;
 
+import javax.annotation.Resource;
+
 @Service
 public class SaveUserService {
 	
-	@Autowired
+	@Resource
 	private SaveUserMapper saveUserMapper;
 	
 	//保存用户名

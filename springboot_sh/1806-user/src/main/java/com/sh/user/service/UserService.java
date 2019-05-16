@@ -8,10 +8,12 @@ import com.sh.user.mapper.UserMapper;
 import com.sh.user.pojo.User;
 import com.sh.user.pojo.UserDetail;
 
+import javax.annotation.Resource;
+
 @Service
 public class UserService {
 	
-	@Autowired
+	@Resource
 	private UserMapper usermapper;
 	
 	public User getMyUser(Long userId) {

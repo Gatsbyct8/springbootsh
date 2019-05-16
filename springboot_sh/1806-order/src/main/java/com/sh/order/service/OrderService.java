@@ -9,9 +9,11 @@ import org.springframework.stereotype.Service;
 import com.sh.order.mapper.OrderMapper;
 import com.sh.order.pojo.Order;
 
+import javax.annotation.Resource;
+
 @Service
 public class OrderService {
-	@Autowired
+	@Resource
 	private OrderMapper orderMapper;
 	public Long saveOrder(Order order) {
 		//传递的order对象缺少orderId

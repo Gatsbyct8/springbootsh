@@ -22,4 +22,9 @@ public class UserDetailController {
 		UserDetail userDetail = userDetailService.getMyUserDetail(userDetailId);
 		return userDetail;
 	}
+	@RequestMapping("personalCenter/add/{userDetailId}")
+	@ResponseBody
+	public void addUserDetail(@PathVariable Long userDetailId){
+		userDetailService.addMyUserDetail(userDetailId);
+	}
 }

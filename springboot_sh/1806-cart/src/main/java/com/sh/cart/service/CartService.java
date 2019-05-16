@@ -9,9 +9,11 @@ import org.springframework.stereotype.Service;
 import com.sh.cart.mapper.CartMapper;
 import com.sh.cart.pojo.Cart;
 
+import javax.annotation.Resource;
+
 @Service
 public class CartService {
-	@Autowired
+	@Resource
 	private CartMapper cartMapper;
 	public List<Cart> queryCarts(Long userId) {
 		//select * from tb_cart where user_id=#{userId}

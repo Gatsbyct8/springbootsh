@@ -115,7 +115,7 @@ div.nav-item li{
             <div>
                 <li>
                     <a href="#" class="a-shop-car"></a>
-                    <!-- 虚的 -->
+                    <!- 虚的 -->
 			<div class="shop-car">
 				<!-- 实的 -->
 				<div class="shopcar-list">
@@ -528,7 +528,7 @@ div.nav-item li{
 	<script src="js/bootstrap.js"></script>
 	<script src="js/ajax.js"></script>
 	<script src="js/index.js"></script>
-	<script src="js/header.js"></script>
-	<script src="js/footer.js"></script>
+	<!--<script src="js/header.js"></script>
+	<script src="js/footer.js"></script>-->
 </body>
 </html>

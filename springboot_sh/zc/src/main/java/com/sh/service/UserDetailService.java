@@ -20,5 +20,10 @@ public class UserDetailService {
 		System.out.println("后台传来的数据:"+userDetail);
 		return userDetail;
 	}
+	public void insertMyUserDateil(Long userId) throws Exception{
+		String url="http://localhost:8095/personalCenter/add/"+userId;
+		String userDateilJson=client.doGet(url);
+		System.out.println(userDateilJson);
+	}
 
 }

@@ -15,6 +15,16 @@ public class loginController {
 	public String goRegister(){
 		return "regist";
 	}
+
+//	@RequestMapping("/header")
+//	public String goHeader(){
+//		return "header";
+//	}
+//
+//	@RequestMapping("/footer")
+//	public String goFooter(){
+//		return "footer";
+//	}
 	
 	
 }

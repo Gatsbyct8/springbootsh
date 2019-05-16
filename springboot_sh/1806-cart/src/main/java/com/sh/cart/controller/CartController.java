@@ -26,9 +26,10 @@ public class CartController {
 		return SysResult.oK(cartList);
 	}
 	//购物车新增
-	@PostMapping("/cart/save")
-	public SysResult saveCart(@RequestBody Cart cart){
+	@RequestMapping("/cart/save")
+	public SysResult saveCart(@RequestBody String cartJson){
 		try{
+			Cart cart=ObjectUtil.mapper.readValue(cartJson, Cart.class);
 			System.out.println("2222222222222"+cart);
 			
 			cartService.saveCart(cart);

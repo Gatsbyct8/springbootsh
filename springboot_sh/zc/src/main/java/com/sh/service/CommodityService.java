@@ -17,7 +17,7 @@ import com.sh.common.util.JSONToListUtil;
 import com.sh.common.util.ObjectUtil;
 import com.sh.common.vo.SysResult;
 import com.sh.pojo.Commodity;
-
+import redis.clients.jedis.Jedis;
 
 
 @Service
@@ -35,10 +35,13 @@ public class CommodityService {
 		//缓存逻辑,key,全局唯一 ITEM_id
 		//判断存在缓存数据与否,
 		//存在数据,直接返回,不存在,继续调用httpclient获取数据,获取回来添加缓存
+		Jedis jedis = new Jedis("localhost", 6379);
 		String key="ITEM_"+commodityId;
-		if(redisService.exists(key)){
+		if(jedis.exists(key)){
 			//将数据解析成item对象,返回
-			String itemJson=redisService.get(key);
+			//Jedis jedis = new Jedis("localhost", 6379);
+			String itemJson= jedis.get(key);
+			//String itemJson=redisService.get(key);
 			Commodity commodity = ObjectUtil.mapper.
 					readValue(itemJson, Commodity.class);
 			return commodity;
@@ -64,23 +67,24 @@ public class CommodityService {
 			commodity.setCommodityBigImage(commodityImg.get(0));
 			commodity.setCommoditySmallImage(commodityImg.get(1));
 			String itemJson=ObjectUtil.mapper.writeValueAsString(commodity);
-			redisService.set(key,itemJson );
+			jedis.set(key,itemJson );
 			return commodity;
 			}
 		}
 //}
 
 	public List<Commodity> getTenCom() throws Exception {
+		Jedis jedis = new Jedis("localhost", 6379);
 		String key="Index_ITEM_Yen";
-		if(redisService.exists(key)){
+		if(jedis.exists(key)){
 			//将数据解析成item对象,返回
-			String itemJson=redisService.get(key);
+			String itemJson=jedis.get(key);
 			List<Commodity> commodityList=(List<Commodity>) ObjectUtil.mapper.readValue(itemJson, SysResult.class).getData();
 			return commodityList;
 		}else{
 			//先从后台获取
-			String url1="http://manage.sh.com/indexCommodity";
-			
+			//String url1="http://manage.sh.com/indexCommodity";
+			String url1="http://localhost:8091/indexCommodity";
 			//httpCLient发起请求,获取响应体的内容,json字符串,转化成item对象
 			
 			String itemJson1 = client.doGet(url1);//响应体重的json字符串
@@ -114,7 +118,7 @@ public class CommodityService {
 			
 			SysResult sys=new SysResult(commodityList);
 			String itemJson=ObjectUtil.mapper.writeValueAsString(sys);
-			redisService.set(key,itemJson );
+			jedis.set(key,itemJson );
 			return commodityList;
 		
 	}

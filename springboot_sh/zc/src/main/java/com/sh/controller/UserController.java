@@ -4,6 +4,7 @@ import javax.servlet.http.HttpServletRequest;
 
 import javax.servlet.http.HttpServletResponse;
 
+import com.sh.service.UserDetailService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -20,6 +21,8 @@ import com.sh.service.UserService;
 public class UserController {
 	@Autowired
 	private UserService userService;
+	@Autowired
+	private UserDetailService userDetailService;
 	//用户注册数据提交
 	@RequestMapping("/service/user/doRegister")
 	
@@ -28,6 +31,7 @@ public class UserController {
 		System.out.println(status);
 		if(status==200){
 			userService.doRegister(user);
+			userDetailService.insertMyUserDateil(user.getUserId());
 			model.addAttribute("msg", "注册成功，请重新登录");
 			model.addAttribute("phone", user.getPhone());
 			return "redirect:/login.html";

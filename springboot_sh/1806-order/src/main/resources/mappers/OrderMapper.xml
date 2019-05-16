@@ -11,7 +11,7 @@ values(#{orderId},#{userId},#{status},#{createTime},#{updateTime});
 insert into order_detail (order_detail_id,commodity_id,count,create_time,update_time,main_image,price,commodity_name,order_id)
 values 
 <foreach collection="orderDetails" item="detail" separator=",">
-(#{detail.orderDetailId},#{detail.commodityId},#{detail.count},#{detail.createTime},#{detail.updateTime},#{detail.mainImage},#{detail.price},#{detail.commodityName},#{orderId})
+(#{detail.orderDetailId},#{detail.commodityId},#{detail.count},#{detail.createTime},#{detail.updateTime},#{detail.mainImage},#{detail.price},#{detail.commodityName},(select order_id from order_list ORDER BY order_id DESC LIMIT 1))
 </foreach>;
 </insert>
 

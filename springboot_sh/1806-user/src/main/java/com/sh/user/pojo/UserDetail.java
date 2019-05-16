@@ -4,13 +4,14 @@ package com.sh.user.pojo;
 
 import java.util.Date;
 
+import javax.persistence.Id;
 import javax.persistence.Table;
 
 import com.sh.common.po.BasePojo;
 
 @Table(name="user_detail")
 public class UserDetail {
-	
+	@Id
 	private Long userDetailId;
 	private String email;
 	private String sex;

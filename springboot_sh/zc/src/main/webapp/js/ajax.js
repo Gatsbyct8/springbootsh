@@ -7,9 +7,10 @@ function ajax({url,type,data,dataType}){
 	  if(xhr.readyState==4&&xhr.status==200){
 		if(dataType!==undefined
 			&&dataType.toLowerCase()==="json")
-		  var res=JSON.parse(xhr.responseText);
+		  //var res=JSON.parse(xhr.responseText);
+		  var res=xhr.responseText;
 		else
-		  var res=xhr.responseText
+		  var res=xhr.responseText;
 		open(res);
 	  }
 	}

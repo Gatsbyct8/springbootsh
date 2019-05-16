@@ -548,7 +548,7 @@ img.err-price {
 }
 
 .loading-style1 b, .loading-style2 {
-	background: url(../images/loading-jd.gif)
+	background: url(../img/loading.gif)
 		no-repeat 50% 50%
 }
 
@@ -568,7 +568,7 @@ img.err-price {
 
 .slide {
 	position: relative;
-	background: url(../images/loading-jd.gif)
+	background: url(../img/loading.gif)
 		no-repeat center center
 }
 
@@ -906,8 +906,8 @@ img.err-price {
 }
 
 .thickloading {
-	background: url(../images/loading-jd.gif)
-		#fff no-repeat center center
+	background: url(../img/loading.gif)
+		#fff no-repeat center center;
 }
 
 .thickcountdown {

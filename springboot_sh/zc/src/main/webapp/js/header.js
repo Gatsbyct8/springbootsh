@@ -6,6 +6,7 @@ $(function(){
         type:"get",
         success:function(res){
             $(res).replaceAll("#header");
+            console.log('1111',res);
             vm=new Vue({
                 el:"#header",
                 data:{
@@ -14,7 +15,7 @@ $(function(){
                 },
                 methods:{
                     search_click(){
-                        location.href=`http://localhost:3000/products.html?kw=${this.kw}`;
+                        location.href=`http://localhost:8090/products.html?kw=${this.kw}`;
                     }
                 },
                 watch:{

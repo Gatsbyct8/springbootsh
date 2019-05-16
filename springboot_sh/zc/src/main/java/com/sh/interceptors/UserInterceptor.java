@@ -24,7 +24,7 @@ public class UserInterceptor implements HandlerInterceptor{
 		String ticket=CookieUtils.getCookieValue(request, "JT_TICKET");
 		if(StringUtils.isNotEmpty(ticket)){//cookie有数据,曾经登录过
 			//发起请求到sso获取redis的数据
-			String url="http://sso.sh.com/user/query/"+ticket;
+			String url="http://localhost:8096/user/query/"+ticket;
 			String jsonData = client.doGet(url);
 			//从sysResult的json中获取userJson,转化成user,获取id
 			//jackson,中有一个类,JsonNode,解析json字符串的;

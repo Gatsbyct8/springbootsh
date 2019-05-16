@@ -17,14 +17,14 @@
         function doUpdate(num)
         {
             document.getElementById('ShowDiv').innerHTML = '<h1 style="font-size: 50px;color: #71d2c3;text-align: center">登录成功！！！将在'+num+'秒后自动跳转到主页</h1>' ;
-            if(num == 0) { window.location = URL; }
+            if(num == 0) { window.location = URL; console.log(URL)}
         }
     </script>
 
 
 </head>
 
-<body onload="Load('redirect:/index.html')">
+<body onload="Load('/index.html')">
 <div id="ShowDiv"></div>
 </body>
 </html>

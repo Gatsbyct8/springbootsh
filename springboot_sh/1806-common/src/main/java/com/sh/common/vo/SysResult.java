@@ -3,6 +3,7 @@ package com.sh.common.vo;
 import java.io.Serializable;
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -23,9 +24,11 @@ public class SysResult implements Serializable{
      * 201	错误
      * 400	参数错误
      */
+
     private Integer status;
 
     // 响应消息
+
     private String msg;
 
     // 响应中的数据

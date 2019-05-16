@@ -35,9 +35,13 @@ public class OrderController {
 	}
 	
 	@RequestMapping("order/orderList/{userId}")
-	public List<Order> findOrderListById(@PathVariable Long userId){
+	public SysResult findOrderListById(@PathVariable Long userId){
 		
 		List<Order> orderList=orderService.findOrderListByUserId(userId);
-		return orderList;
+		SysResult s=new SysResult();
+		s.setData(orderList);
+		s.setMsg("0");
+		s.setStatus(200);
+		return s;
 	}
 }

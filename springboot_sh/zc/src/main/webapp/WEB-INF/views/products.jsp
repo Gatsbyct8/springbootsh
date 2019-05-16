@@ -39,7 +39,7 @@
             <div>
                 <li>
                     <a href="#" class="a-shop-car"></a>
-                    <!-- 虚的 -->
+                    <!- 虚的 -->
                     <div class="shop-car">
                         <!-- 实的 -->
                         <div class="shopcar-list">
@@ -60,7 +60,7 @@
     <div class="nav-sub">
         <div class="contain">
             <ul>
-                <li><a href="index.jsp" class="active">首页</a></li>
+                <li><a href="index.html" class="active">首页</a></li>
             </ul>
             <div class="nav-search">
                 <div class="search">

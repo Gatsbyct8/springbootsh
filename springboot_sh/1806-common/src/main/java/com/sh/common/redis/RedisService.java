@@ -25,12 +25,12 @@ public class RedisService {
 	public void set(String key,String value){
 		//ShardedJedis jedis = pool.getResource();
 		Set<HostAndPort> nodes=new HashSet<HostAndPort>();
-		nodes.add(new HostAndPort("118.25.181.24", 8000));
-		nodes.add(new HostAndPort("119.29.174.167", 8001));
-		nodes.add(new HostAndPort("172.16.0.11", 8002));
-		nodes.add(new HostAndPort("132.232.64.89", 8003));
-		nodes.add(new HostAndPort("132.232.123.209", 8004));
-		nodes.add(new HostAndPort("148.70.108.163", 8005));
+		nodes.add(new HostAndPort("47.100.221.203", 7001));
+		nodes.add(new HostAndPort("47.100.221.203", 7002));
+		nodes.add(new HostAndPort("47.100.221.203", 7003));
+		nodes.add(new HostAndPort("47.100.221.203", 7004));
+		nodes.add(new HostAndPort("47.100.221.203", 7005));
+		nodes.add(new HostAndPort("47.100.221.203", 7006));
 		
 		//构造一个配置对象,为底层初始化连接池做准备;
 		GenericObjectPoolConfig config=new GenericObjectPoolConfig();
@@ -47,12 +47,13 @@ public class RedisService {
 	public void set(String key,String value,Integer seconds){
 		//ShardedJedis jedis = pool.getResource();
 				Set<HostAndPort> nodes=new HashSet<HostAndPort>();
-				nodes.add(new HostAndPort("118.25.181.24", 8000));
-				nodes.add(new HostAndPort("119.29.174.167", 8001));
-				nodes.add(new HostAndPort("172.16.0.11", 8002));
-				nodes.add(new HostAndPort("132.232.64.89", 8003));
-				nodes.add(new HostAndPort("132.232.123.209", 8004));
-				nodes.add(new HostAndPort("148.70.108.163", 8005));
+				nodes.add(new HostAndPort("localhost", 8000));
+//				nodes.add(new HostAndPort("118.25.181.24", 8000));
+//				nodes.add(new HostAndPort("119.29.174.167", 8001));
+//				nodes.add(new HostAndPort("172.16.0.11", 8002));
+//				nodes.add(new HostAndPort("132.232.64.89", 8003));
+//				nodes.add(new HostAndPort("132.232.123.209", 8004));
+//				nodes.add(new HostAndPort("148.70.108.163", 8005));
 				
 				//构造一个配置对象,为底层初始化连接池做准备;
 				GenericObjectPoolConfig config=new GenericObjectPoolConfig();
@@ -70,12 +71,13 @@ public class RedisService {
 	public Boolean exists(String key){
 		//ShardedJedis jedis = pool.getResource();
 				Set<HostAndPort> nodes=new HashSet<HostAndPort>();
-				nodes.add(new HostAndPort("118.25.181.24", 8000));
-				nodes.add(new HostAndPort("119.29.174.167", 8001));
-				nodes.add(new HostAndPort("172.16.0.11", 8002));
-				nodes.add(new HostAndPort("132.232.64.89", 8003));
-				nodes.add(new HostAndPort("132.232.123.209", 8004));
-				nodes.add(new HostAndPort("148.70.108.163", 8005));
+				nodes.add(new HostAndPort("localhost", 8000));
+//				nodes.add(new HostAndPort("118.25.181.24", 8000));
+//				nodes.add(new HostAndPort("119.29.174.167", 8001));
+//				nodes.add(new HostAndPort("172.16.0.11", 8002));
+//				nodes.add(new HostAndPort("132.232.64.89", 8003));
+//				nodes.add(new HostAndPort("132.232.123.209", 8004));
+//				nodes.add(new HostAndPort("148.70.108.163", 8005));
 				
 				//构造一个配置对象,为底层初始化连接池做准备;
 				GenericObjectPoolConfig config=new GenericObjectPoolConfig();
@@ -94,12 +96,13 @@ public class RedisService {
 	public String get(String key){
 		//ShardedJedis jedis = pool.getResource();
 				Set<HostAndPort> nodes=new HashSet<HostAndPort>();
-				nodes.add(new HostAndPort("118.25.181.24", 8000));
-				nodes.add(new HostAndPort("119.29.174.167", 8001));
-				nodes.add(new HostAndPort("172.16.0.11", 8002));
-				nodes.add(new HostAndPort("132.232.64.89", 8003));
-				nodes.add(new HostAndPort("132.232.123.209", 8004));
-				nodes.add(new HostAndPort("148.70.108.163", 8005));
+				nodes.add(new HostAndPort("localhost", 8000));
+//				nodes.add(new HostAndPort("118.25.181.24", 8000));
+//				nodes.add(new HostAndPort("119.29.174.167", 8001));
+//				nodes.add(new HostAndPort("172.16.0.11", 8002));
+//				nodes.add(new HostAndPort("132.232.64.89", 8003));
+//				nodes.add(new HostAndPort("132.232.123.209", 8004));
+//				nodes.add(new HostAndPort("148.70.108.163", 8005));
 				
 				//构造一个配置对象,为底层初始化连接池做准备;
 				GenericObjectPoolConfig config=new GenericObjectPoolConfig();
@@ -118,12 +121,13 @@ public class RedisService {
 	public void del(String key){
 		//ShardedJedis jedis = pool.getResource();
 				Set<HostAndPort> nodes=new HashSet<HostAndPort>();
-				nodes.add(new HostAndPort("118.25.181.24", 8000));
-				nodes.add(new HostAndPort("119.29.174.167", 8001));
-				nodes.add(new HostAndPort("172.16.0.11", 8002));
-				nodes.add(new HostAndPort("132.232.64.89", 8003));
-				nodes.add(new HostAndPort("132.232.123.209", 8004));
-				nodes.add(new HostAndPort("148.70.108.163", 8005));
+				nodes.add(new HostAndPort("localhost", 8000));
+//				nodes.add(new HostAndPort("118.25.181.24", 8000));
+//				nodes.add(new HostAndPort("119.29.174.167", 8001));
+//				nodes.add(new HostAndPort("172.16.0.11", 8002));
+//				nodes.add(new HostAndPort("132.232.64.89", 8003));
+//				nodes.add(new HostAndPort("132.232.123.209", 8004));
+//				nodes.add(new HostAndPort("148.70.108.163", 8005));
 				
 				//构造一个配置对象,为底层初始化连接池做准备;
 				GenericObjectPoolConfig config=new GenericObjectPoolConfig();

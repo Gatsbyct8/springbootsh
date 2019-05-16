@@ -33,7 +33,7 @@
             <div>
                 <li>
                     <a href="#" class="a-shop-car"></a>
-                    <!-- 虚的 -->
+                    <!- 虚的 -->
                     <div class="shop-car">
                         <!-- 实的 -->
                         <div class="shopcar-list">
@@ -51,6 +51,7 @@
         <!-- 用户登录与购物车 -->
     </nav>
     <!-- 第二行导航 -->
+    <div id="header">
     <div class="nav-sub">
         <div class="contain">
             <ul>
@@ -83,9 +84,10 @@
         </div>
     </div>
     <!-- 第二行导航 -->
-
+    </div>
     <!-- 测试 -->
     <div style="width:100%;height:250px"></div>
     <!-- 测试 -->
+
 </body>
 </html>

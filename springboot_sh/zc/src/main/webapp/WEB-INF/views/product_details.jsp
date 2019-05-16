@@ -42,7 +42,7 @@
             <div>
                 <li>
                     <a href="#" class="a-shop-car"></a>
-                    <!-- 虚的 -->
+                    <!- 虚的 -->
 		<div class="shop-car">
 			<!-- 实的 -->
 			<div class="shopcar-list">
@@ -163,7 +163,7 @@
 						<img class="card-img-top"
 							data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail"
 							alt="Thumbnail [100%x225]"
-							src="img/product_detail/product_detail_1.png"
+							src="../../img/product_detail/product_detail_1.png"
 							data-holder-rendered="true">
 						<div class="card-body p-0">
 							<p class="card-text text-center small">ThinkPad New S2
@@ -176,7 +176,7 @@
 						<img class="card-img-top"
 							data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail"
 							alt="Thumbnail [100%x225]"
-							src="img/product_detail/product_detail_2.png"
+							src="../../img/product_detail/product_detail_2.png"
 							data-holder-rendered="true">
 						<div class="card-body p-0">
 							<p class="card-text text-center small">戴尔 DELL燃7000 R1605S 超霸</p>
@@ -188,7 +188,7 @@
 						<img class="card-img-top"
 							data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail"
 							alt="Thumbnail [100%x225]"
-							src="img/product_detail/product_detail_3.png"
+							src="../../img/product_detail/product_detail_3.png"
 							data-holder-rendered="true">
 						<div class="card-body p-0">
 							<p class="card-text text-center small">戴尔(DELL)魔方15MF
@@ -201,7 +201,7 @@
 						<img class="card-img-top"
 							data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail"
 							alt="Thumbnail [100%x225]"
-							src="img/product_detail/product_detail_4.png"
+							src="../../img/product_detail/product_detail_4.png"
 							data-holder-rendered="true">
 						<div class="card-body p-0">
 							<p class="card-text text-center small">联想(Lenovo) YOGA900
@@ -214,7 +214,7 @@
 						<img class="card-img-top"
 							data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail"
 							alt="Thumbnail [100%x225]"
-							src="img/product_detail/product_detail_1.png"
+							src="../../img/product_detail/product_detail_1.png"
 							data-holder-rendered="true">
 						<div class="card-body p-0">
 							<p class="card-text text-center small">ThinkPad New S2
@@ -248,7 +248,7 @@
 			<div class="col-md-10 pt-5">
 				<a name="规格参数"></a>
 				<h6 class="d-inline-block ml-3">
-					规格参数 <img src="img/product_detail/product_detail_icon_1.png" alt="">
+					规格参数 <img src="../../img/product_detail/product_detail_icon_1.png" alt="">
 				</h6>
 				<div class="pl-3">
 					<ul class="list-unstyled">

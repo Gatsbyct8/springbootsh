@@ -10,16 +10,18 @@ import com.sh.manage.mapper.CommodityMapper;
 import com.sh.manage.pojo.Commodity;
 import com.sh.manage.pojo.CommodityImg;
 
+import javax.annotation.Resource;
+
 @Service
 public class CommodityService {
-	@Autowired
+	@Resource
 	private CommodityMapper commodityMapper;
 	
 	public Commodity getCom(Long commodityId) {
 		return commodityMapper.selectByPrimaryKey(commodityId);
 	}
-	
-	@Autowired
+
+	@Resource
 	private CommodityImageMapper commodityImgMapper;
 	
 	public CommodityImg getComImg(Long commodityId) {
