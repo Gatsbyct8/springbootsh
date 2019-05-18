@@ -32,7 +32,7 @@ public class CartInterceptor implements HandlerInterceptor{
 			JsonNode userNode = jsonNode.get("data");
 			//userNode就是userJson的jsonNode格式数据,转化成字符串userJson"" null
 			String userJson = userNode.asText();
-			if(StringUtils.isNotEmpty(userJson)){
+			if(StringUtils.isNotEmpty(userJson)&&!userJson.equals("null")){
 				User user=ObjectUtil.mapper.readValue(userJson, User.class);
 				//利用拦击器,将userId传递给controller
 				Long userId= user.getUserId();
