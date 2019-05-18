@@ -453,7 +453,7 @@ body {
 				<div class="bar-wrapper">
 					<div class="bar-right">
 						<div class="totalMoney">
-					共计: <strong class="total_text">0.00</strong>
+					共计: <strong class="total_text">${orderDetail.price}*${orderDetail.count}</strong>
 				</div>
 					</div>
 				</div>

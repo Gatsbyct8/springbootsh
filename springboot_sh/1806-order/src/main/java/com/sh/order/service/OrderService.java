@@ -23,6 +23,10 @@ public class OrderService {
 		order.setCreateTime(new Date());
 		order.setUpdateTime(order.getCreateTime());
 		order.setStatus(1);//默认的订单状态都是未付款
+        for(int i=0;i<order.getOrderDetails().size();i++) {
+            order.getOrderDetails().get(i).setCreateTime(order.getCreateTime());
+            order.getOrderDetails().get(i).setUpdateTime(order.getCreateTime());
+        }
 		orderMapper.saveOrder(order);
 		return orderMapper.getOrder().getOrderId();
 	}

@@ -52,7 +52,7 @@
 					<label for="checkbox_${status.index+2 }"></label>
 				</li>
 				<li class="list_con">
-					<div class="list_img"><a href="javascript:;"><img src="images/1.png" alt=""></a></div>
+					<div class="list_img"><a href="javascript:;"><img src="../${cart.mianImage}" alt=""></a></div>
 					<div class="list_text"><a href="javascript:;">${cart.name}</a></div>
 				</li>
 				
@@ -71,7 +71,7 @@
 					<p class="sum_price">￥${cart.price*cart.count}</p>
 				</li>
 				<li class="list_op">
-					<p class="del"><a href="http://www.sh.com/cart/delete/${commodityId}" class="delBtn">移除商品</a></p>
+					<p class="del"><a href="http://localhost:8090/cart/delete/${cart.commodityId}" class="delBtn">移除商品</a></p>
 				</li>
 			</ul>
 		</c:forEach>

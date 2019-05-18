@@ -33,7 +33,7 @@
 			<c:set var="totalPrice"  value="${ totalPrice + (cart.price * cart.count)}"/>
 			<input type="hidden" name="orderDetails[${status.index}].commodityId" value="${cart.commodityId}"/>
 			<input type="hidden" name="orderDetails[${status.index}].commodityName" value="${cart.name}"/>
-			<input type="hidden" name="orderDetails[${status.index}].mainImage" value="${cart.mainImage}"/>
+			<input type="hidden" name="orderDetails[${status.index}].mainImage" value="${cart.mianImage}"/>
 			<input type="hidden" name="orderDetails[${status.index}].price" value="${cart.price * cart.count}"/>
 			<input type="hidden" name="orderDetails[${status.index}].count" value="${cart.count}"/>
 		</c:forEach>

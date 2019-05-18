@@ -16,7 +16,7 @@ public class UserDetail {
 	private String email;
 	private String sex;
 	private String avatar;
-	private Date birthday;
+	private String birthday;
 	
 	public Long getUserDetailId() {
 		return userDetailId;
@@ -42,10 +42,10 @@ public class UserDetail {
 	public void setAvatar(String avatar) {
 		this.avatar = avatar;
 	}
-	public Date getBirthday() {
+	public String getBirthday() {
 		return birthday;
 	}
-	public void setBirthday(Date birthday) {
+	public void setBirthday(String birthday) {
 		this.birthday = birthday;
 	}
 }

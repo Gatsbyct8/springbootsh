@@ -24,11 +24,17 @@ public class OrderService {
 		//转化json
 		String orderJson=ObjectUtil.mapper.writeValueAsString(order);
 		String orderId=client.doPostJson(url, orderJson);
+		for(int i=0;i<order.getOrderDetails().size();i++) {
+			Long commodityId=order.getOrderDetails().get(i).getCommodityId();
+			String url1 = "http://localhost:8092/cart/delete/" + order.getUserId() + "/" + commodityId;
+			client.doGet(url1);
+		}
 		return Long.parseLong(orderId);
 	}
 	public Order success(Long id) throws Exception {
 		//String url="http://order.sh.com/order/query/"+id;
 		String url="http://localhost:8093/order/query/"+id;
+
 		String orderJson=client.doGet(url);
 		//转化成对象
 		Order order=ObjectUtil.mapper.readValue(orderJson, Order.class);

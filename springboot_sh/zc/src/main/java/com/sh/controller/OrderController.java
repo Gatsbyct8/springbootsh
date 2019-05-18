@@ -46,6 +46,11 @@ public class OrderController {
 		Long userId=(long)request.getAttribute("userId");
 		order.setUserId(userId);
 		Long orderId=orderService.submit(order);
+//		for(int i=0;i<order.getOrderDetails().size();i++) {
+//			Long commodityId=order.getOrderDetails().get(i).getCommodityId();
+//			String url = "http://localhost:8092/cart/delete/" + userId + "/" + commodityId;
+//			client.doGet(url);
+//		}
 		return SysResult.oK(orderId);
 	}
 	

@@ -68,7 +68,7 @@
 			<div id="preview" class="col pr-0">
 				<div class="card bg-transparent mr-5 position-absolute">
 					<img class="card-img-top"
-						src="http:${commodity.commodityBigImage }" alt="Card image cap">
+						src="http:../${commodity.commodityBigImage }" alt="Card image cap">
 					<div id="mask" class="position-absolute d-none"></div>
 					<div id="super-mask" class="position-absolute"></div>
 					<div id="div-lg" class="position-absolute d-none"></div>
@@ -79,7 +79,7 @@
 							<!--<ul class="list-unstyled mb-0">-->
 							<ul class="list-unstyled mb-0">
 								<li v-for="p in pics" class="float-left p-1"><img
-									:src="http:${commodity.commoditySmallImage }"
+									:src="http:../${commodity.commoditySmallImage }"
 									:data-md="img/product/md/57e3b072N661cd00d.jpg" :data-lg="p.lg">
 								</li>
 							</ul>

@@ -12,7 +12,8 @@
     <link rel="stylesheet" href="../../css1/footer.css">
     <script src="../../js1/jquery-3.2.1.js"></script>
     <script src="../../js1/header.js"></script>
-    <script type="text/javascript" src="../..//js/jquery.min.js"></script>
+    <script src="../../js/My97DatePicker/WdatePicker.js"></script>
+    <script type="text/javascript" src="../../js/jquery.min.js"></script>
     <title>INBEAUTY-我的账户</title>
 
     <style>
@@ -69,17 +70,34 @@
             border-radius: 50%;
         }
 
+        .main {
+            margin-top: 10px;
+        }
+        .user-name {
+            padding-left: 500px;
+            margin-top: 10px;
+        }
+        .phone-no {
+            padding-left: 500px;
+            margin-top: 10px;
+        }
+        .email-input {
+             margin-left: 16px;
+        }
+        .sex-input {
+            margin-left: 26px;
+        }
         form{
-            width:450px;
-            margin: 30px auto 0px;
-            border: 2px solid #C40000;
+            /*width:450px;*/
+            /*margin: 30px auto 0px;*/
+            /*border: 2px solid #C40000;*/
         }
         table{
             margin: 0px auto 0px;
         }
         .tds{
-            text-align: right;
-            font-size:18px;
+            text-align: left;
+            font-size:16px;
         }
         td{
             padding-top:10px;
@@ -161,13 +179,13 @@
 </head>
     <script type="text/javascript">
       function button_click_name() {
-    	  var $username=$("#useranme");
-    	  var username=$username.val();
+    	  var username=$("#username").val();
+    	  console.log(username);
     	  var userId=$("#userId").val();
     	  $.ajax(
     	      {
     	          type:'get',
-    	          url : 'user.sh.com/personalCenter/username/'+userId+'/'+username,
+    	          url : 'http://localhost:8095/personalCenter/username/'+userId+'/'+username,
     	          dataType : 'jsonp',
     	          jsonp:"callback",
     	          success  : function(data) {
@@ -195,7 +213,7 @@
         	  $.ajax(
         	      {
         	          type:'get',
-        	          url : 'http://user.sh.com/personalCenter/phone/'+userId+'/'+phone,
+        	          url : 'http://localhost:8095/personalCenter/phone/update/'+userId+'/'+phone,
         	          dataType : 'jsonp',
         	          jsonp:"callback",
         	          success  : function(data) {
@@ -241,7 +259,7 @@
             <div>
                 <li>
                     <a href="#" class="a-shop-car"></a>
-                    <!-- 虚的 -->
+                    <!-虚的 -->
                     <div class="shop-car">
                         <!-- 实的 -->
                         <div class="shopcar-list">
@@ -273,52 +291,73 @@
     }
 </style>
 
-
-<img src="images/100.jpg" class="round_icon"  alt="">
-
-
-
-<tr>
-    <td class="tds">用户名：</td>
-    <td><input type="text" name="username" id="username" value="${user.username }">
-        <input type="hidden" name="userId" id="userId" value="${user.userId }" >
-    <input type="button" onclick="button_onclick_name()">修改</input>
-    </td>
-</tr>
-<tr>
-    <td class="tds">手机号：</td>
-    <td><input type="text" name="phone" id="phone" value="${user.phone }"></span><button type="button" onclick="javascript:button_onclick_phone();">修改</button></td>
-</tr>
-
+<div class="main">
+    <img src="images/100.jpg" class="round_icon"  alt="">
+    <div class="user-name">
+        <label>用户名：</label><input type="text" name="username" id="username" value="${user.username }">
+        <input type="hidden" name="userId" id="userId" value="${user.userId }" />
+        <button type="button" onclick="button_click_name()">修改</button>
+    </div>
+    <div class="phone-no">
+        <label>手机号：</label><input type="text" name="phone" id="phone" value="${user.phone }"/>
+        <button type="button" onclick="javascript:button_click_phone();">修改</button>
+    </div>
+<%--<tr>--%>
+    <%--<td class="tds">用户名：</td>--%>
+    <%--<td><input type="text" name="username" id="username" value="${user.username }"/>--%>
+        <%--<input type="hidden" name="userId" id="userId" value="${user.userId }" />--%>
+    <%--<button type="button" onclick="button_click_name()">修改</button>--%>
+    <%--</td>--%>
+<%--</tr>--%>
+<%--<tr>--%>
+    <%--<td class="tds">手机号：</td>--%>
+    <%--<td><input type="text" name="phone" id="phone" value="${user.phone }"/></span><button type="button" onclick="javascript:button_click_phone();">修改</button></td>--%>
+<%--</tr>--%>
+</div>
 
 <form action="/myuser/personalCenter/updateUserDetail" method="POST" >
-<table>
-    <tr>
-        <td class="tds">邮箱：</td>
-        <td><input type="text" name="email" value="${ userDetail.email}"></td>
-    </tr>
-    <tr class="odd">
-        <td>出生日期:</td>
-        <td>
-            <input type="text" style="width:90px;" name="birthday" value="${ userDetail.birthday}"
-                  onclick="WdatePicker({dateFmt:'yyyy-MM-dd',isShowClear:true,readOnly:true,maxDate:'#F{$dp.$D(\'StopTime_date\')}',onpicked:pickedFunc})
-"/>
-        </td>
-        <td>性别:</td>
-        <td>
-            <input type="radio" name="sex" value="男" checked="'男'.equals(${userDetail.sex})?checked:unchecked"/>男
-            <input type="radio" name="sex" value="女" />女
-            
-        </td>
-    </tr>
-    <tr>
-        <td colspan="2">
-            <input type="submit" value="提交"/>
-        </td>
-    </tr>
-</table>
+    <div class="phone-no">
+        <label>邮箱：</label><input type="text" name="email" class="email-input" value="${ userDetail.email}">
+    </div>
+    <div class="phone-no">
+        <label>出生日期:</label><input type="date" style="width:150px;" name="birthday" value="${ userDetail.birthday}"/>
+    </div>
+    <div class="phone-no">
+        <label>性别:</label><input type="radio" name="sex" value="男" class="sex-input" checked="'男'.equals(${userDetail.sex})?checked:unchecked"/>男
+        <input type="radio" name="sex" value="女" />女
+    </div>
+    <div class="phone-no">
+        <input type="submit" value="提交"/>
+    </div>
+<%--<table>--%>
+    <%--<tr>--%>
+        <%--<td class="tds">邮箱：</td>--%>
+        <%--<td><input type="text" name="email" value="${ userDetail.email}"></td>--%>
+    <%--</tr>--%>
+    <%--<tr class="odd">--%>
+        <%--<td>出生日期:</td>--%>
+        <%--<td>--%>
+            <%--<input type="text" style="width:150px;" name="birthday" value="${ userDetail.birthday}"--%>
+                  <%--onclick="WdatePicker({dateFmt:'yyyy-MM-dd',isShowClear:true,readOnly:true,maxDate:'#F{$dp.$D(\'StopTime_date\')}',onpicked:pickedFunc})--%>
+<%--"/>--%>
+        <%--</td>--%>
+    <%--</tr>--%>
+    <%--<tr>--%>
+        <%--<td class="tds">性别:</td>--%>
+        <%--<td>--%>
+            <%--<input type="radio" name="sex" value="男" checked="'男'.equals(${userDetail.sex})?checked:unchecked"/>男--%>
+            <%--<input type="radio" name="sex" value="女" />女--%>
+
+        <%--</td>--%>
+    <%--</tr>--%>
+    <%--<tr>--%>
+        <%--<td colspan="2">--%>
+            <%--<input type="submit" value="提交"/>--%>
+        <%--</td>--%>
+    <%--</tr>--%>
+<%--</table>--%>
 </form>
-</form>
+
 
 <script> 
     function pickedFunc(){

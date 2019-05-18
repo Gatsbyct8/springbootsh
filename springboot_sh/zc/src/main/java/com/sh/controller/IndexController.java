@@ -1,5 +1,6 @@
 package com.sh.controller;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -53,9 +54,11 @@ public class IndexController {
 		System.out.println("userId:"+userId);
 		User user = userService.goMyuser(userId);
 		UserDetail userDetail = userDetailService.goMyUserDateil(userId);
+		//SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+		//String birthday = sdf.format(userDetail.getBirthday());
 		model.addAttribute("user",user);
 		model.addAttribute("userDetail",userDetail);
-		
+		//model.addAttribute("birthday",birthday);
 		return "myuser";
 	}
 	
