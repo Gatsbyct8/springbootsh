@@ -33,7 +33,7 @@ public class SearchService {
 		MatchQueryBuilder query = QueryBuilders.
 				matchQuery("name", q).
 				operator(Operator.AND);
-		SearchResponse response = client.prepareSearch("commodity").
+		SearchResponse response = client.prepareSearch("opinion_system").
 		setQuery(query).setFrom(12*(page-1)).setSize(12).get();
 		
 		SearchHits hits = response.getHits();
@@ -44,7 +44,7 @@ public class SearchService {
 			//封装数据 price title sellpoint image id
 			Commodity Commodity=new Commodity();
 			Commodity.setCommodityId((int)hit.getSource().get("commodity_id")+0L);
-			Commodity.setPrice((int)hit.getSource().get("price")+0l);
+			Commodity.setPrice((double)hit.getSource().get("price"));
 			Commodity.setName(hit.getSource().get("title")+"");
 			Commodity.setDetailSpecification(hit.getSource().get("detail_specification")+"");
 			CommodityList.add(Commodity);

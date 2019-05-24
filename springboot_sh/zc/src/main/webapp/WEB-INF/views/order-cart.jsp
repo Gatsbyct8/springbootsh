@@ -216,10 +216,10 @@
 				  <tr>
 				    <td class="fore1">
 					   <div class="p-goods">
-						  <div class="p-img"><a href="http://www.sh.com/product_details/${cart.commodityId}.html" target='_blank'><img width="52" height="52" src="${cart.mainImage}"></a></div>
+						  <div class="p-img"><a href="http://localhost:8090/product_details/${cart.commodityId}.html" target='_blank'><img width="52" height="52" src="${cart.mainImage}"></a></div>
 							 <div class="p-detail">
 								<div class="p-name">
-									<a href="http://www.sh.com/product_details/${cart.commodityId}.html" target='_blank'>
+									<a href="http://localhost:8090/product_details/${cart.commodityId}.html" target='_blank'>
 										${cart.name }
 								    </a>
 								</div>

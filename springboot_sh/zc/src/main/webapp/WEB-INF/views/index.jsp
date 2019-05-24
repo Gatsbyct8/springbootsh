@@ -358,7 +358,7 @@ div.nav-item li{
 	               <span class="text-primary">¥${commodity.price }</span>
 	               <a class="btn btn-primary" href="product_details/7">查看详情</a>
 	             </div>
-	             <img class="card-img-right flex-auto d-none d-md-block mt-5" data-src="holder.js/200x250?theme=thumb" alt="Thumbnail [200x250]"src="http://${commodity.commodityBigImage }" data-holder-rendered="true">
+	             <img class="card-img-right flex-auto d-none d-md-block mt-5" data-src="holder.js/200x250?theme=thumb" alt="Thumbnail [200x250]"src="http://localhost:8090/${commodity.commodityBigImage }" data-holder-rendered="true">
 	           </c:forEach>
 	           </div>
 	         </div>
@@ -368,7 +368,7 @@ div.nav-item li{
 							end="9">
 	             <div class="col-md-4 p-0 pl-2">
 	               <div class="card border-0 text-center">
-	                 <img class="card-img-top" src="http://${commodity.commodityBigImage }" alt="Card image cap">
+	                 <img class="card-img-top" src="http://localhost:8090/${commodity.commodityBigImage }" alt="Card image cap">
 	                 <div class="card-body p-0 pr-1 pl-1">
 	                   <span class="d-inline-block">${commodity.name }</span>
 	                   <span class="text-primary small">¥${commodity.price }</span>

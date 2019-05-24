@@ -31,7 +31,7 @@ public class UserController {
 		int status=userService.doRegister(user);
 		System.out.println(status);
 		if(status==200){
-			userService.doRegister(user);
+			//userService.doRegister(user);
 			userDetailService.insertMyUserDateil(user.getUserId());
 			model.addAttribute("msg", "注册成功，请重新登录");
 			model.addAttribute("phone", user.getPhone());
