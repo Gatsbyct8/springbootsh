@@ -33,7 +33,7 @@ public class UserService {
 		}
 		return count==0? SysResult.oK(false):SysResult.oK(true);
 	}
-	public void insertUser(User user) {
+	public User insertUser(User user) {
 		//由于前台没有传递email,保证数据插入的有效
 		user.setCreateTime(new Date());
 		user.setUpdateTime(user.getCreateTime());
@@ -42,6 +42,8 @@ public class UserService {
 		user.setPassword(DigestUtils.md5Hex(user.getPassword()));
 		//System.out.println(user.getUserId());
 		userMapper.insertSelective(user);
+		//user=userMapper.selectOne(user);
+		return userMapper.selectOne(user);
 	}
 	@Autowired
 	private RedisService redis;

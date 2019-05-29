@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="1804-common:war">
+    <output-path>$PROJECT_DIR$/springboot_sh/1806-common/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>1804-common</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="1806-common-0.0.1-SNAPSHOT.war">
+      <element id="artifact" artifact-name="1804-common:war exploded" />
+    </root>
+  </artifact>
+</component>

@@ -35,7 +35,7 @@ public class UserController {
 	public SysResult insertUser(User user){
 		try{
 			userService.insertUser(user);
-			return SysResult.oK(user.getPhone());
+			return SysResult.oK(user.getUserId());
 		}catch(Exception e ){
 			return SysResult.build(201, e.getMessage());
 		}

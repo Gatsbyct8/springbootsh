@@ -34,6 +34,9 @@ public class UserDetailService {
     public void addMyUserDetail(Long userDetailId) {
 		UserDetail detail=new UserDetail();
 		detail.setUserDetailId(userDetailId);
+		detail.setBirthday("1970-01-01");
+		detail.setEmail("123@123.com");
+		detail.setSex("男");
 		userDetailMapper.insert(detail);
     }
 }

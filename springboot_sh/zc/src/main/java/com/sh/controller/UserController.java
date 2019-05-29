@@ -28,11 +28,12 @@ public class UserController {
 	@RequestMapping("/service/user/doRegister")
 	
 	public String doRegister(User user,Model model) throws Exception{
-		int status=userService.doRegister(user);
-		System.out.println(status);
-		if(status==200){
+		SysResult result=userService.doRegister(user);
+		System.out.println(Long.valueOf(String.valueOf(result.getData())));
+		//User newuser=(Long)result.getData();
+		if(result.getStatus()==200){
 			//userService.doRegister(user);
-			userDetailService.insertMyUserDateil(user.getUserId());
+			userDetailService.insertMyUserDateil(Long.valueOf(String.valueOf(result.getData())));
 			model.addAttribute("msg", "注册成功，请重新登录");
 			model.addAttribute("phone", user.getPhone());
 			return "redirect:/login.html";

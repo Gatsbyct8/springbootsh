@@ -2,8 +2,10 @@
 <project version="4">
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$/springboot_sh/1806-cart" />
+    <file type="web" url="file://$PROJECT_DIR$/springboot_sh/1806-common" />
     <file type="web" url="file://$PROJECT_DIR$/springboot_sh/1806-manage" />
     <file type="web" url="file://$PROJECT_DIR$/springboot_sh/1806-order" />
+    <file type="web" url="file://$PROJECT_DIR$/springboot_sh/1806-sso" />
     <file type="web" url="file://$PROJECT_DIR$/springboot_sh/1806-user" />
     <file type="web" url="file://$PROJECT_DIR$/springboot_sh/zc" />
   </component>

@@ -28,7 +28,7 @@ public class UserService {
 	private HttpClientService client;
 	
 	
-	public int doRegister(User user) throws Exception {
+	public SysResult doRegister(User user) throws Exception {
 		//String url="http://sso.sh.com/user/register";
 		String url="http://localhost:8096/user/register";
 		//调用的doPost(url,map)
@@ -41,8 +41,8 @@ public class UserService {
 		String jsonData=response.getBody();
 		System.out.println(jsonData);
 		SysResult result=ObjectUtil.mapper.readValue(jsonData, SysResult.class);
-		int status= result.getStatus();
-		return status;
+		//int status= result.getStatus();
+		return result;
 	}
 	public String doLogin(User user) throws Exception {
 		//String url="http://sso.sh.com/user/login";

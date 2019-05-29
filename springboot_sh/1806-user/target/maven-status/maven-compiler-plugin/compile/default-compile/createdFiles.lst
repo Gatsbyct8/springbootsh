@@ -1,0 +1,12 @@
+com\sh\user\controller\SaveUserController.class
+com\sh\user\pojo\User.class
+com\sh\StarterUser.class
+com\sh\user\mapper\SaveUserMapper.class
+com\sh\user\controller\UserController.class
+com\sh\user\service\UserDetailService.class
+com\sh\user\service\SaveUserService.class
+com\sh\user\mapper\UserMapper.class
+com\sh\user\service\UserService.class
+com\sh\user\controller\UserDetailController.class
+com\sh\user\mapper\UserDetailMapper.class
+com\sh\user\pojo\UserDetail.class
